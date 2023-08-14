@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    height: 80vh;
+   
+}
+.hero{
+    width: 100%;
+    height: 101vh;
+    background-image: linear-gradient(rgba(64, 81, 83, 0.75), rgba(0, 0, 0, 0.932)), url('../Image/bck.jpg');
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.hero img{
+    height: 90px;
+    width: 200px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    transition: .4s;
+    color: rgba(2, 230, 255, 0.866);
+}
+
+.hover-nav a{   
+    position: relative;
+    padding: 0 2px;
+}
+.hover-nav a::after{
+    content: "";
+    position: absolute;
+    background-color:rgba(10, 217, 240, 0.75);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+.home{
+    color: rgba(71, 237, 255, 0.75);
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+}
+.hover-nav a:hover:after{
+    width: 100%;
+}
+.btn{
+    background-color: rgba(10, 217, 240, 0.75);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+    box-shadow: 0 0 3px rgba(10, 217, 240, 0.75);
+    
+}
+.btn:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(10, 217, 240, 0.75);
+}
+.Rooms{
+    position: relative;
+    display: inline-block;
+}
+.choices_rooms{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.Rooms:hover .choices_rooms{
+    display: block;
+}
+.choices_rooms a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.choices_rooms a:hover{
+    background-color: #f1f1f1;
+}
+.wrapper{
+    max-width: 590px;
+    width: 100%;
+    background-color: transparent;
+    margin: 10px auto;
+    padding: 30px;
+    box-shadow:0 0 20px rgba(10, 217, 240, 0.75);
+    border-radius: 20px;
+}
+
+.wrapper .title{
+   font-weight: 700;
+   margin-bottom: 25px;
+   color: white;
+   text-transform: uppercase;
+   text-align: center;
+}
+span{
+    color: rgba(71, 237, 255, 0.75);
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+}
+.wrapper .form{
+    width: 100%;
+}
+.wrapper .form .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-content: center;
+}
+.wrapper .form .input_field label{
+   width: 200px;
+   color: #19dff9;
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: bold;
+}
+
+.button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 19px;
+   
+}
+button{
+    background-color: #19dff9;
+    border: none;
+    height: 30px;
+    width: 70px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #080808;
+}

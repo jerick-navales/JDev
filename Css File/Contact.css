@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(rgba(44, 51, 51, 0.75), rgba(52, 58, 61, 0.932)), url('../image/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.hero img{
+    height: 90px;
+    width: 200px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    transition: .4s;
+    color: rgba(2, 230, 255, 0.866);
+}
+.hover-nav a{   
+    position: relative;
+    padding: 0 2px;
+}
+.hover-nav a::after{
+    content: "";
+    position: absolute;
+    background-color:rgba(10, 217, 240, 0.75);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+.hover-nav a:hover:after{
+    width: 100%;
+}
+.btn{
+    background-color: rgba(10, 217, 240, 0.75);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+    box-shadow: 0 0 10px rgba(10, 217, 240, 0.75);
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.container .account{
+    background-image:  linear-gradient(rgba(21, 23, 23, 0.75), rgba(101, 126, 138, 0.932)), url(../Image/background.png);
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 8px 10px 8px rgb(65, 61, 61);
+    transition:  transform .4s;
+    
+    
+}
+.container .account:nth-child(1):hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.74)),url('../Image/jerick.png');
+    background-position: center;
+}
+.container .account:nth-child(2):hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.74)),url('../Image/jeca.png');
+   background-position: center;
+}
+.container .account:nth-child(3):hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.74)),url('../Image/noime.png');
+    background-position: center;
+}
+.container .account:nth-child(4):hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.74)),url('../Image/regine.png');
+   background-position: center;
+}
+.container .account:nth-child(5):hover{
+    transform: scale(1.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.74)),url('../Image/chezka.png');
+    background-position: center;
+}
+@media all and (min-height: 600px) {
+    .hero{
+        height: 100vh;
+    }
+    .container {
+        margin-top: 50px;
+    }
+
+}
+
+h2{
+    color:  rgba(10, 217, 240, 0.75);
+    text-shadow: 0 0 0 10px  rgba(10, 217, 240, 0.75),
+    0 0 0 20px  rgba(10, 217, 240, 0.75);
+    text-align: center;
+    font-size: 23px;
+    padding: 17px 0 40px 0;
+}
+.container ul li{
+    width: 90%;
+    margin-left: 30px;
+    list-style-type: none;
+}
+.container a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: top;
+    color:   rgba(10, 217, 240, 0.75);
+    padding-left: 6px;
+}
+
+.container a:hover{
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+}
+.container img{
+    height: 25px;
+    width: 25px;
+    background-color: rgba(10, 217, 240, 0.75);
+    padding: 4px;
+    border-radius: 50px;
+    filter:drop-shadow(6px 4px 2px  rgba(75, 74, 74, 0.75));
+}

@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(44, 49, 49, 0.75), rgba(17, 19, 19, 0.932)), url('../Image/rooms.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.hero img{
+    height: 90px;
+    width: 200px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.about {
+    color: rgba(71, 237, 255, 0.75);
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+}
+nav ul li a:hover{
+    transition: .4s;
+    color: #02e6ffdd;
+}
+.hover-nav a{   
+    position: relative;
+    padding: 0 2px;
+}
+.hover-nav a::after{
+    content: "";
+    position: absolute;
+    background-color:rgba(10, 217, 240, 0.75);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+.hover-nav a:hover:after{
+    width: 100%;
+}
+.btn{
+    background-color: rgba(10, 217, 240, 0.75);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+    box-shadow: 0 0 3px rgba(10, 217, 240, 0.75);
+   
+}
+.btn:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(10, 217, 240, 0.75);
+}
+.content{
+    width: 80%;
+    height: 60vh;
+    margin: auto;
+    text-align: center;
+    background: transparent;
+    box-shadow: 0 0 20px gray;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.content p{
+    color: rgba(255, 255, 255, 0.688);
+    padding: 10px;
+}
+@media all and (min-height: 600px) {
+    .content{
+        margin-top: 40px;
+    }
+
+}

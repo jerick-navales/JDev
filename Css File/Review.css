@@ -1,0 +1,209 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;
+    height: 222vh; 
+    background-image: linear-gradient(rgba(43, 49, 49, 0.75), rgba(54, 59, 59, 0.932)), url('../Image/review.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.hero img{
+    height: 90px;
+    width: 200px;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    transition: .4s;
+    color: rgba(2, 230, 255, 0.866);
+}
+.hover-nav a{   
+    position: relative;
+    padding: 0 2px;
+}
+.hover-nav a::after{
+    content: "";
+    position: absolute;
+    background-color:rgba(10, 217, 240, 0.75);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+.review{
+    color: rgba(71, 237, 255, 0.75);
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+}
+.hover-nav a:hover:after{
+    width: 100%;
+}
+.btn{
+    background-color: rgba(10, 217, 240, 0.75);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+    box-shadow: 0 0 3px rgba(10, 217, 240, 0.75);
+   
+}
+.btn:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(10, 217, 240, 0.75);
+}
+.container{
+    text-align: center; 
+}
+h1{
+     color: rgba(71, 237, 255, 0.75);
+      font-size: 40px;
+      padding: 10px 0px 5px 0px;
+  
+  }
+  .one p{
+    font-size: 17px;
+  }
+  p{
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+  }
+  .two{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      justify-content: space-between;
+      width: 300px;
+      margin: 10px auto;
+  }
+  .two img{
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      transition: transform .4s;
+  }
+  .two img:hover{
+    transform: scale(1.3);
+    transition: .3s;
+    box-shadow: 0 0 15px rgba(10, 217, 240, 0.75);
+  }
+  .content{
+      width: 98%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 30px;
+  }
+  .box{
+      display: flex;
+  }
+  .content .box:hover{
+    box-shadow: 0 0 10px rgba(71, 237, 255, 0.75);
+    color: rgba(71, 237, 255, 0.75);
+    text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                 0 0 20px rgba(10, 217, 240, 0.75),
+                 0 0 40px rgba(10, 217, 240, 0.75);
+    border-radius: 10px;
+  }
+  h3{
+      font-size: 20px;
+      color: rgba(71, 237, 255, 0.75);
+  }
+  .left{
+    position: relative;
+    display: inline-block;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 91%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 22px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+  }
+  
+  .left:hover .overlay {
+    opacity: 1;
+  }
+  .left img{
+      height: 250px;
+      width: 275px;
+      transition:  transform .4s;
+      border-radius: 15px;
+  }
+  .right{
+      display: flex;
+      padding-top: 35px;
+      padding-left: 10px;
+  }
+  .right img{
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;      
+  }
+
+  .comment{
+      margin-left: 10px;
+  }
+  .comment p{
+      width: 213px;
+      margin: 10px;
+  }
+  h5{
+      font-size: 20px;
+      color: rgba(71, 237, 255, 0.75);
+      text-shadow: 0 0 10px rgba(10, 217, 240, 0.75),
+                   0 0 20px rgba(10, 217, 240, 0.75);
+  }
+
+@media all and (min-height: 600px) {
+    .hero{
+        height: 194vh;
+    }
+    .container {
+       margin-top: 30px;
+    }
+    .content{
+        margin-top: 40px;
+    }
+    .left img{
+        height: 270px;
+        width: 270px;
+        transition:  transform .4s;
+        border-radius: 15px;
+    }
+    .overlay{
+        height: 92%;
+    }
+}
