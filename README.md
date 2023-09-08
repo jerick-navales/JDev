@@ -1,4 +1,64 @@
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)My name is Jerick Navales
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Typing Letters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #letter-container {
+            display: inline-block;
+            margin-top: 50px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="letter-container"></div>
+
+    <script>
+        const letterContainer = document.getElementById('letter-container');
+        const phrases = [
+            "Hello. im Jerick Navales",
+            "Stay curious, keep learning.",
+            "Practise Practise Practise"
+        ];
+        let currentPhraseIndex = 0;
+        let currentLetterIndex = 0;
+
+        function typeLetter() {
+            if (currentLetterIndex < phrases[currentPhraseIndex].length) {
+                letterContainer.innerHTML += phrases[currentPhraseIndex].charAt(currentLetterIndex);
+                currentLetterIndex++;
+                setTimeout(typeLetter, 50); // Adjust typing speed here (in milliseconds)
+            } else {
+                setTimeout(eraseLetter, 1000); // Wait for a second before erasing
+            }
+        }
+
+        function eraseLetter() {
+            if (letterContainer.innerHTML.length > 0) {
+                letterContainer.innerHTML = letterContainer.innerHTML.slice(0, -1);
+                setTimeout(eraseLetter, 30); // Adjust erasing speed here (in milliseconds)
+            } else {
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Cycle through phrases
+                currentLetterIndex = 0;
+                setTimeout(typeLetter, 500); // Wait for half a second before typing the next phrase
+            }
+        }
+
+        // Start typing animation
+        typeLetter();
+    </script>
+</body>
+</html>
+
 ======================================================================================================================================
 
 Future Web Developer
