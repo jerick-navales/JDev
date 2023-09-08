@@ -1,66 +1,77 @@
-
-
-<iframe src="typing-animation.html" frameborder="0" width="100%" height="200"></iframe>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        #letter-container {
-            display: inline-block;
-            margin-top: 50px;
-            font-size: 24px;
-        }
-    </style>
+    <title>Embedded Typing Animation</title>
 </head>
 <body>
-    <div id="letter-container"></div>
+    <!-- You can adjust the width and height of the iframe as needed -->
+    <iframe srcdoc='
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+                }
 
-    <script>
-        const letterContainer = document.getElementById('letter-container');
-        const phrases = [
-            "This is the first phrase.",
-            "Now we're typing the second phrase.",
-            "And here's the third phrase!"
-        ];
-        let currentPhraseIndex = 0;
-        let currentLetterIndex = 0;
+                #letter-container {
+                    display: inline-block;
+                    margin-top: 50px;
+                    font-size: 24px;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="letter-container"></div>
 
-        function typeLetter() {
-            if (currentLetterIndex < phrases[currentPhraseIndex].length) {
-                letterContainer.innerHTML += phrases[currentPhraseIndex].charAt(currentLetterIndex);
-                currentLetterIndex++;
-                setTimeout(typeLetter, 50); // Adjust typing speed here (in milliseconds)
-            } else {
-                setTimeout(eraseLetter, 1000); // Wait for a second before erasing
-            }
-        }
+            <script>
+                const letterContainer = document.getElementById("letter-container");
+                const phrases = [
+                    "This is the first phrase.",
+                    "Now we're typing the second phrase.",
+                    "And here's the third phrase!",
+                ];
+                let currentPhraseIndex = 0;
+                let currentLetterIndex = 0;
 
-        function eraseLetter() {
-            if (letterContainer.innerHTML.length > 0) {
-                letterContainer.innerHTML = letterContainer.innerHTML.slice(0, -1);
-                setTimeout(eraseLetter, 30); // Adjust erasing speed here (in milliseconds)
-            } else {
-                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Cycle through phrases
-                currentLetterIndex = 0;
-                setTimeout(typeLetter, 500); // Wait for half a second before typing the next phrase
-            }
-        }
+                function typeLetter() {
+                    if (currentLetterIndex < phrases[currentPhraseIndex].length) {
+                        letterContainer.innerHTML +=
+                            phrases[currentPhraseIndex].charAt(currentLetterIndex);
+                        currentLetterIndex++;
+                        setTimeout(typeLetter, 50); // Adjust typing speed here (in milliseconds)
+                    } else {
+                        setTimeout(eraseLetter, 1000); // Wait for a second before erasing
+                    }
+                }
 
-        // Start typing animation
-        typeLetter();
-    </script>
+                function eraseLetter() {
+                    if (letterContainer.innerHTML.length > 0) {
+                        letterContainer.innerHTML = letterContainer.innerHTML.slice(0, -1);
+                        setTimeout(eraseLetter, 30); // Adjust erasing speed here (in milliseconds)
+                    } else {
+                        currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Cycle through phrases
+                        currentLetterIndex = 0;
+                        setTimeout(typeLetter, 500); // Wait for half a second before typing the next phrase
+                    }
+                }
+
+                // Start typing animation
+                typeLetter();
+            </script>
+        </body>
+        </html>
+    ' frameborder="0" width="100%" height="300"></iframe>
 </body>
 </html>
+
 
 
 
