@@ -1,7 +1,12 @@
+
+
+<iframe src="typing-animation.html" frameborder="0" width="100%" height="200"></iframe>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infinite Typing Letters</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,9 +28,9 @@
     <script>
         const letterContainer = document.getElementById('letter-container');
         const phrases = [
-            "Hello. im Jerick Navales",
-            "Stay curious, keep learning.",
-            "Practise Practise Practise"
+            "This is the first phrase.",
+            "Now we're typing the second phrase.",
+            "And here's the third phrase!"
         ];
         let currentPhraseIndex = 0;
         let currentLetterIndex = 0;
@@ -55,6 +60,9 @@
         typeLetter();
     </script>
 </body>
+</html>
+
+
 
 
 
